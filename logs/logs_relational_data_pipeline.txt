@@ -1963,3 +1963,55 @@ END;
 ) - line: 44[0m
 [38;5;183m2024-05-10 20:27:06,799 - pipeline_relational_data.tasks - insert_into_table - INFO - (2155 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orderdetails table) - line: 90[0m
 [38;5;183m2024-05-10 20:27:06,799 - pipeline_relational_data.flow - exec - INFO - (Relational Flow Completed Successfully) - line: 45[0m
+[38;5;183m2024-05-10 20:43:46,074 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 03381f04-db55-4dd4-9261-98ab728d19c1) - line: 26[0m
+[38;5;183m2024-05-10 20:43:46,357 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:46,388 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:46,404 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:46,541 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:46,560 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 20:43:46,560 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:46,591 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:46,602 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:46,633 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:46,708 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:46,727 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:47,092 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:47,108 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 20:43:47,362 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:47,378 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:47,425 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:47,518 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 20:43:48,877 - pipeline_relational_data.tasks - insert_into_table - INFO - (830 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orders table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:48,944 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.OrderDetails
+   ([OrderID],[ProductID],[UnitPrice],[Quantity],[Discount])
+	values(?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 20:43:50,291 - pipeline_relational_data.tasks - insert_into_table - INFO - (2155 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orderdetails table) - line: 90[0m
+[38;5;183m2024-05-10 20:43:50,291 - pipeline_relational_data.flow - exec - INFO - (Relational Flow Completed Successfully) - line: 45[0m

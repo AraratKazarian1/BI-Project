@@ -58,9 +58,9 @@ BEGIN
     CREATE TABLE OrderDetails (
         OrderID INT NOT NULL,
         ProductID INT NOT NULL,
-        UnitPrice INT NOT NULL,
+        UnitPrice DECIMAL(20, 2) NOT NULL,
         Quantity INT NOT NULL,
-        Discount INT NOT NULL
+        Discount DECIMAL(20,10 ) DEFAULT 0.0 NOT NULL
     );
 END
 
@@ -75,7 +75,7 @@ BEGIN
         RequiredDate DATETIME NOT NULL,
         ShippedDate DATETIME NULL,
         ShipVia INT NOT NULL,
-        Freight FLOAT NOT NULL,
+        Freight DECIMAL(10, 2) NOT NULL,
         ShipName VARCHAR(255) NOT NULL,
         ShipAddress VARCHAR(255) NOT NULL,
         ShipCity VARCHAR(255) NOT NULL,
@@ -95,11 +95,11 @@ BEGIN
         SupplierID INT NOT NULL,
         CategoryID INT NOT NULL,
         QuantityPerUnit VARCHAR(255) NOT NULL,
-        UnitPrice FLOAT NOT NULL,
+        UnitPrice DECIMAL(10, 2) NOT NULL,
         UnitsInStock INT NOT NULL,
         UnitsOnOrder INT NOT NULL,
         ReorderLevel INT NOT NULL,
-        Discontinued VARCHAR(255) NOT NULL
+        Discontinued BIT NOT NULL
     );
 END
 
@@ -118,7 +118,7 @@ BEGIN
     CREATE TABLE Shippers (
         ShipperID INT NOT NULL,
         CompanyName VARCHAR(255) NOT NULL,
-        Phone VARCHAR(255) NOT NULL
+        Phone VARCHAR(20) NOT NULL
     );
 END
 
@@ -133,10 +133,10 @@ BEGIN
         Address VARCHAR(255) NOT NULL,
         City VARCHAR(255) NOT NULL,
         Region VARCHAR(255) NULL,
-        PostalCode VARCHAR(255) NOT NULL,
+        PostalCode VARCHAR(20) NOT NULL,
         Country VARCHAR(255) NOT NULL,
         Phone VARCHAR(255) NOT NULL,
-        Fax VARCHAR(255) NULL,
+        Fax VARCHAR(20) NULL,
         HomePage VARCHAR(255) NULL
     );
 END
@@ -150,7 +150,3 @@ BEGIN
         RegionID INT NOT NULL
     );
 END
-
-
-use ORDERS_RELATIONAL_DB;
-select * from Categories
