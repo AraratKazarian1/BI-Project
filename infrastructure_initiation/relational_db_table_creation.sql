@@ -150,3 +150,7 @@ BEGIN
         RegionID INT NOT NULL
     );
 END
+
+
+use ORDERS_RELATIONAL_DB;
+select * from Categories

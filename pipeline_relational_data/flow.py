@@ -28,8 +28,6 @@ class RelationalDataFlow:
     def exec(self):
         # Initiating Connection
         conn_ER = tasks.connect_db_create_cursor("Database1")
-        
-        tasks.drop_constraint(conn_ER,  'employees', 'ORDERS_RELATIONAL_DB', 'dbo')
 
         #Inserting Data
         tasks.insert_into_table(conn_ER, 'categories', 'ORDERS_RELATIONAL_DB', 'dbo', 'raw_data_source.xlsx', 'Categories')
@@ -42,8 +40,6 @@ class RelationalDataFlow:
         tasks.insert_into_table(conn_ER, 'employees', 'ORDERS_RELATIONAL_DB', 'dbo', 'raw_data_source.xlsx', 'Employees')
         tasks.insert_into_table(conn_ER, 'orders', 'ORDERS_RELATIONAL_DB', 'dbo', 'raw_data_source.xlsx', 'Orders')
         tasks.insert_into_table(conn_ER, 'orderdetails', 'ORDERS_RELATIONAL_DB', 'dbo', 'raw_data_source.xlsx', 'OrderDetails')
-
-        tasks.add_constraint(conn_ER,  'employees', 'ORDERS_RELATIONAL_DB', 'dbo')
 
         conn_ER.close()
         logger.info("Relational Flow Completed Successfully")
