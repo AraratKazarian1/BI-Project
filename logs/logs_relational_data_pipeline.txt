@@ -750,3 +750,949 @@ FOREIGN KEY (RegionID) REFERENCES Region(RegionID);
 ) - line: 44[0m
 [38;5;183m2024-05-10 18:07:50,626 - pipeline_relational_data.tasks - establish_referential_integrity - INFO - (Referential integrity constraints have been established.) - line: 70[0m
 [38;5;183m2024-05-10 18:07:50,626 - pipeline_relational_data.flow - exec - INFO - (Relational Flow Completed Successfully) - line: 73[0m
+[38;5;183m2024-05-10 18:43:13,804 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: a4536624-17c0-48ce-84f7-59ef4d4c5282) - line: 26[0m
+[38;5;183m2024-05-10 18:43:14,101 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:43:14,122 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 18:43:14,142 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:43:14,263 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 18:43:14,284 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 18:43:14,291 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 18:43:14,308 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:43:14,320 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 18:43:14,352 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:43:14,415 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 18:43:14,438 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:49:13,745 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: d5b74e76-929f-42d3-b4ac-be1e12a9157f) - line: 26[0m
+[38;5;183m2024-05-10 18:49:14,045 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:49:14,068 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 18:49:14,086 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:49:14,176 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 18:49:14,199 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 18:49:14,205 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 18:49:14,225 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:49:14,233 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 18:49:14,267 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:49:14,339 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 18:49:14,362 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:36,436 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: c2f8e806-6c64-48b5-a98c-9a029921e05d) - line: 26[0m
+[38;5;183m2024-05-10 18:52:36,721 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:36,751 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:36,771 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:36,896 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:36,922 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 18:52:36,930 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:36,948 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:36,957 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:36,993 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:37,072 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:37,101 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 18:52:37,486 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:37,510 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 18:52:37,802 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 18:52:37,824 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:25,429 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 0a6bff59-91a9-4195-9c5e-bbe967ed6736) - line: 26[0m
+[38;5;183m2024-05-10 19:02:25,725 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:25,750 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:25,770 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:25,889 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:25,911 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:02:25,919 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:25,938 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:25,949 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:25,984 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:26,068 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:26,094 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:02:26,467 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:26,488 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:02:26,810 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:02:26,833 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:04:20,991 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 76f15705-609c-4294-8a54-d9abd2ca91b9) - line: 26[0m
+[38;5;183m2024-05-10 19:04:21,077 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:04:21,305 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:04:21,515 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:05,997 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: d8868a1e-e465-4308-9167-d87a6eabab87) - line: 26[0m
+[38;5;183m2024-05-10 19:06:06,092 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,347 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:06:06,537 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,563 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:06,585 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,711 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:06,732 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,741 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:06,759 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,770 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:06,803 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:06,886 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:06,913 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:06:07,311 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:07,334 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:06:07,656 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:06:07,676 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:53,963 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: ac79066b-fadf-4608-b71b-92a1bebede20) - line: 26[0m
+[38;5;183m2024-05-10 19:09:54,064 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,245 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:09:54,459 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,481 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:54,504 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,628 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:54,651 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,660 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:54,678 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,688 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:54,721 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:54,803 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:54,827 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:55,217 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:55,243 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:09:55,569 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:55,589 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:09:55,621 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 84[0m
+[38;5;183m2024-05-10 19:09:55,707 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:17,774 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 9395bd25-a3af-489b-9862-02aa89ac11ec) - line: 26[0m
+[38;5;183m2024-05-10 19:12:17,852 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,042 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:12:18,265 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,292 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:18,317 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,437 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:18,456 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,465 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:18,484 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,495 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:18,527 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,610 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:18,638 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:18,999 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:19,026 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:12:19,333 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:19,354 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:12:19,400 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 84[0m
+[38;5;183m2024-05-10 19:12:19,488 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:24,690 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 60ecda30-087f-43f0-8f7a-b16dc3e2bf3b) - line: 26[0m
+[38;5;183m2024-05-10 19:16:24,784 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,032 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:16:25,240 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,265 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,288 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,402 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,422 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,431 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,449 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,458 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,491 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,565 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,596 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:25,959 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:25,982 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:16:26,294 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:26,316 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:16:26,361 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 84[0m
+[38;5;183m2024-05-10 19:16:26,449 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,169 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: a9974e67-5b1f-4f04-a14c-f635f1cae260) - line: 26[0m
+[38;5;183m2024-05-10 19:20:08,442 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,469 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:08,487 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,617 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:08,638 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,646 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:08,664 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,672 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:08,703 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:08,783 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:08,810 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:09,179 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:09,205 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:20:09,505 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:20:09,525 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:20:38,209 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 148cc7b8-409b-4f73-b0d9-c5896ac1cb42) - line: 26[0m
+[38;5;183m2024-05-10 19:20:38,259 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:20:38,460 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:20:38,657 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,254 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 919a2f65-0b17-423b-a44b-07cadd818994) - line: 26[0m
+[38;5;183m2024-05-10 19:22:07,333 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,537 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:22:07,754 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,779 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:07,801 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,924 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:07,943 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,951 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:07,972 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:07,981 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:08,013 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:08,098 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:08,121 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:08,500 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:08,523 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:22:08,859 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:08,882 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:22:08,929 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 84[0m
+[38;5;183m2024-05-10 19:22:09,015 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:43,948 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 8e3254c4-35f9-46b2-a042-04a143d29019) - line: 26[0m
+[38;5;183m2024-05-10 19:23:44,021 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,190 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:23:44,410 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,435 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:44,459 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,568 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:44,588 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,593 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:44,622 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,627 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:44,662 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:44,749 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:44,773 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:45,125 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:45,152 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:23:45,439 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:45,463 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:45,502 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:45,589 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:23:46,860 - pipeline_relational_data.tasks - insert_into_table - INFO - (830 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orders table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:46,932 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.OrderDetails
+   ([OrderID],[ProductID],[UnitPrice],[Quantity],[Discount])
+	values(?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:23:48,439 - pipeline_relational_data.tasks - insert_into_table - INFO - (2155 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orderdetails table) - line: 84[0m
+[38;5;183m2024-05-10 19:23:48,440 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: -- Foreign Key Constraints
+
+-- Employees table
+ALTER TABLE Employees
+ADD CONSTRAINT FK_Employees_ReportsTo
+FOREIGN KEY (ReportsTo) REFERENCES Employees(EmployeeID);
+
+-- OrderDetails table
+ALTER TABLE OrderDetails
+ADD CONSTRAINT FK_OrderDetails_OrderID
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID);
+
+ALTER TABLE OrderDetails
+ADD CONSTRAINT FK_OrderDetails_ProductID
+FOREIGN KEY (ProductID) REFERENCES Products(ProductID);
+
+-- Orders table
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Orders_CustomerID
+FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Orders_EmployeeID
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID);
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Orders_ShipVia
+FOREIGN KEY (ShipVia) REFERENCES Shippers(ShipperID);
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Orders_TerritoryID
+FOREIGN KEY (TerritoryID) REFERENCES Territories(TerritoryID);
+
+-- Products table
+ALTER TABLE Products
+ADD CONSTRAINT FK_Products_CategoryID
+FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID);
+
+ALTER TABLE Products
+ADD CONSTRAINT FK_Products_SupplierID
+FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID);
+
+-- Territories table
+ALTER TABLE Territories
+ADD CONSTRAINT FK_Territories_RegionID
+FOREIGN KEY (RegionID) REFERENCES Region(RegionID);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:26:02,671 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 124facd7-277c-44cb-91bc-18c8a22ec4c2) - line: 26[0m
+[38;5;183m2024-05-10 19:26:02,929 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:26:02,955 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:02,975 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,088 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:03,109 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,117 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:03,135 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,143 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:03,177 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,255 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:03,282 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,649 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:03,674 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:26:03,984 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 84[0m
+[38;5;183m2024-05-10 19:26:04,005 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:31:42,528 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 926c70a3-411d-410b-938e-183e4d1769ca) - line: 26[0m
+[38;5;183m2024-05-10 19:31:42,576 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:31:42,774 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:31:42,973 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:48,339 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 3e6c3a3f-da45-415e-85ae-da9e360f32eb) - line: 26[0m
+[38;5;183m2024-05-10 19:32:48,409 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Delete the foreign key constraint
+    DECLARE @constraintName NVARCHAR(255);
+
+    SELECT @constraintName = tc.CONSTRAINT_NAME
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY';
+
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  DROP CONSTRAINT ' + @constraintName;
+
+    EXEC sp_executesql @sql;
+    
+    PRINT 'Foreign key constraint has been deleted from table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'No foreign key constraint found on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:32:48,628 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:32:48,843 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:48,867 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:48,890 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,000 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,022 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,030 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,052 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,061 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,097 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,172 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,199 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,556 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,579 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,868 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:49,894 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:49,933 - pipeline_relational_data.tasks - insert_into_table - INFO - (9 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.employees table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:50,030 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Orders
+   ([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate]
+	,[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity], [ShipRegion]
+	,[ShipPostalCode],[ShipCountry],[TerritoryID])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:32:51,370 - pipeline_relational_data.tasks - insert_into_table - INFO - (830 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orders table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:51,438 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.OrderDetails
+   ([OrderID],[ProductID],[UnitPrice],[Quantity],[Discount])
+	values(?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:32:52,692 - pipeline_relational_data.tasks - insert_into_table - INFO - (2155 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.orderdetails table) - line: 90[0m
+[38;5;183m2024-05-10 19:32:52,693 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF NOT EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Add the foreign key constraint
+    ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  
+    ADD CONSTRAINT FK_Employees_DepartmentID FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID);
+    
+    PRINT 'Foreign key constraint has been added to table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'Foreign key constraint already exists on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,292 - pipeline_relational_data.flow - __init__ - INFO - (RelationalDataFlow instance created with UUID: 58095119-d580-44b7-aeaf-133b6ecbe91d) - line: 26[0m
+[38;5;183m2024-05-10 19:35:58,361 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: IF NOT EXISTS (
+    SELECT 1
+    FROM {db}.INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS tc
+    INNER JOIN {db}.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS rc ON tc.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+    WHERE tc.TABLE_NAME = 'Employees' AND tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+)
+BEGIN
+    -- Add the foreign key constraint
+    ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  
+    ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY (DepartmentID) REFERENCES ORDERS_RELATIONAL_DB.DBO.Departments (DepartmentID);
+    
+    PRINT 'Foreign key constraint has been added to table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
+END
+ELSE
+BEGIN
+    PRINT 'Foreign key constraint already exists on the table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES)';
+END;
+) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,478 - pipeline_relational_data.tasks - drop_constraint - INFO - (Foreign Key Constraint dropped from dbo.employees ) - line: 58[0m
+[38;5;183m2024-05-10 19:35:58,683 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Categories
+   ([CategoryID],[CategoryName],[Description])
+	values(?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,713 - pipeline_relational_data.tasks - insert_into_table - INFO - (8 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.categories table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:58,731 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Suppliers
+	([SupplierID] ,[CompanyName] ,[ContactName] ,[ContactTitle] ,[Address] ,[City]
+	,[Region] ,[PostalCode] ,[Country] ,[Phone] ,[Fax] ,[HomePage])
+	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,850 - pipeline_relational_data.tasks - insert_into_table - INFO - (29 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.suppliers table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:58,870 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Shippers
+    ([ShipperID],[CompanyName],[Phone])
+    values(?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,879 - pipeline_relational_data.tasks - insert_into_table - INFO - (3 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.shippers table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:58,897 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Region
+	([RegionID],[RegionDescription])
+	values(?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:35:58,907 - pipeline_relational_data.tasks - insert_into_table - INFO - (4 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.region table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:58,941 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Territories
+    ([TerritoryID],[TerritoryDescription],[RegionID])
+    values (?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:35:59,014 - pipeline_relational_data.tasks - insert_into_table - INFO - (53 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.territories table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:59,037 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Customers
+   ([CustomerID],[CompanyName],[ContactName],[ContactTitle]
+	,[Address],[City],[Region],[PostalCode],[Country], [Phone], [Fax])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m
+[38;5;183m2024-05-10 19:35:59,402 - pipeline_relational_data.tasks - insert_into_table - INFO - (91 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.customers table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:59,424 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Products
+    ([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit]
+    ,[UnitPrice],[UnitsInStock], [UnitsOnOrder],[ReorderLevel], [Discontinued])
+    values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+) - line: 44[0m
+[38;5;183m2024-05-10 19:35:59,725 - pipeline_relational_data.tasks - insert_into_table - INFO - (77 rows have been inserted into the ORDERS_RELATIONAL_DB.dbo.products table) - line: 90[0m
+[38;5;183m2024-05-10 19:35:59,748 - pipeline_relational_data.tasks - load_query - INFO - (Loaded SQL Script: INSERT INTO {db}.{schema}.Employees
+   ([EmployeeID],[LastName],[FirstName],[Title]
+	,[TitleOfCourtesy],[BirthDate],[HireDate],[Address],[City], [Region]
+	,[PostalCode],[Country],[HomePhone], [Extension], [Notes], [ReportsTo], [PhotoPath])
+	values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);) - line: 44[0m

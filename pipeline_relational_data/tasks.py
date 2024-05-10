@@ -69,6 +69,12 @@ def establish_referential_integrity(cursor, db, schema):
     cursor.commit()
     logger.info("Referential integrity constraints have been established.")
 
+def add_constraint(cursor,  table_name, db, schema):
+    add_constraint_script = load_query('add_constraint_{}'.format(table_name)).format(db=db, schema=schema)
+    cursor.execute(add_constraint_script)
+    cursor.commit()
+    logger.info(f"Foreign Key Constraint added to {schema}.{table_name} ")
+
 def insert_into_table(cursor, table_name, db, schema, source_data, sheet_name):
     # Read the Excel sheet
     df = pd.read_excel(source_data, sheet_name=sheet_name, header=0)

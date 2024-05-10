@@ -20,8 +20,8 @@ BEGIN
         ContactTitle VARCHAR(255) NOT NULL,
         Address VARCHAR(255) NOT NULL,
         City VARCHAR(255) NOT NULL,
-        Region FLOAT NULL,
-        PostalCode VARCHAR(255) NOT NULL,
+        Region VARCHAR(255) NULL,
+        PostalCode VARCHAR(255) NULL,
         Country VARCHAR(255) NOT NULL,
         Phone VARCHAR(255) NOT NULL,
         Fax VARCHAR(255) NULL
@@ -46,7 +46,7 @@ BEGIN
         Country VARCHAR(255) NOT NULL,
         HomePhone VARCHAR(255) NOT NULL,
         Extension INT NOT NULL,
-        Notes VARCHAR(255) NOT NULL,
+        Notes VARCHAR(500) NOT NULL,
         ReportsTo INT NULL,
         PhotoPath VARCHAR(255) NOT NULL
     );
@@ -73,14 +73,14 @@ BEGIN
         EmployeeID INT NOT NULL,
         OrderDate DATETIME NOT NULL,
         RequiredDate DATETIME NOT NULL,
-        ShippedDate DATETIME NOT NULL,
+        ShippedDate DATETIME NULL,
         ShipVia INT NOT NULL,
         Freight FLOAT NOT NULL,
         ShipName VARCHAR(255) NOT NULL,
         ShipAddress VARCHAR(255) NOT NULL,
         ShipCity VARCHAR(255) NOT NULL,
-        ShipRegion FLOAT NULL,
-        ShipPostalCode INT NOT NULL,
+        ShipRegion VARCHAR(255) NULL,
+        ShipPostalCode VARCHAR(255) NULL,
         ShipCountry VARCHAR(255) NOT NULL,
         TerritoryID INT NOT NULL
     );

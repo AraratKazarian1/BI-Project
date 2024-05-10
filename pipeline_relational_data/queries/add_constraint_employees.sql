@@ -7,7 +7,7 @@ IF NOT EXISTS (
 BEGIN
     -- Add the foreign key constraint
     ALTER TABLE ORDERS_RELATIONAL_DB.DBO.EMPLOYEES  
-    ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY (DepartmentID) REFERENCES ORDERS_RELATIONAL_DB.DBO.Departments (DepartmentID);
+    ADD CONSTRAINT FK_Employees_DepartmentID FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID);
     
     PRINT 'Foreign key constraint has been added to table ORDERS_RELATIONAL_DB.DBO.EMPLOYEES';
 END
