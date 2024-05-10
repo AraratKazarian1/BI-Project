@@ -1,3 +1,5 @@
+Use ORDERS_RELATIONAL_DB;
+
 -- Categories table
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Categories]') AND type in (N'U'))
 BEGIN
@@ -45,7 +47,7 @@ BEGIN
         HomePhone VARCHAR(255) NOT NULL,
         Extension INT NOT NULL,
         Notes VARCHAR(255) NOT NULL,
-        ReportsTo FLOAT NULL,
+        ReportsTo INT NULL,
         PhotoPath VARCHAR(255) NOT NULL
     );
 END

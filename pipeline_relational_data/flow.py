@@ -1,3 +1,5 @@
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline_relational_data import tasks 
 import utils
 from pipeline_relational_data import config

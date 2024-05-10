@@ -1,3 +1,5 @@
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import os
 import pandas as pd
 import pyodbc
@@ -39,7 +41,7 @@ def load_query(query_name):
                 sql_script = script_file.read()
             break
 
-    #logger.info("Loaded SQL Script: %s", sql_script)
+    logger.info("Loaded SQL Script: %s", sql_script)
     return sql_script
 
 def drop_table(cursor, table_name, db, schema):

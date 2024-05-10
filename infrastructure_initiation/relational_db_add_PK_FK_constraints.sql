@@ -1,3 +1,5 @@
+Use ORDERS_RELATIONAL_DB;
+
 -- Ensure all changes are executed as a single transaction
 BEGIN TRANSACTION;
 
