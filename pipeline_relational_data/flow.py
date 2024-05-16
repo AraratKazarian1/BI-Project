@@ -5,6 +5,8 @@ import utils
 from pipeline_relational_data import config
 from logger import CustomFormatter
 import logging
+import pandas as pd
+import numpy as np
 
 # Setting up logging
 log_file_path=config.log_loc
@@ -28,6 +30,10 @@ class RelationalDataFlow:
     def exec(self):
         # Initiating Connection
         conn_ER = tasks.connect_db_create_cursor("Database1")
+        # df = pd.read_excel("raw_data_source.xlsx")
+        # df.sort_values(by='ReportsTo', ascending=True, na_position='first', inplace=True)
+        # df['ReportsTo'] = df['ReportsTo'].astype("Int64")
+        # df.replace({np.nan: None, np.inf: None, -np.inf: None}, inplace=True)
 
         #Inserting Data
         tasks.insert_into_table(conn_ER, 'categories', 'ORDERS_RELATIONAL_DB', 'dbo', 'raw_data_source.xlsx', 'Categories')
