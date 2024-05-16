@@ -2,7 +2,7 @@ CREATE DATABASE [ORDERS_DIMENSIONAL_DB]
 ON PRIMARY 
 ( 
     NAME = 'ORDERS_DIMENSIONAL_DB', 
-    FILENAME = '/Users/milenabazoyan/Desktop/ORDERS_DIMENSIONAL_DB.mdf', 
+    FILENAME = 'C:\Users\arara\OneDrive\Desktop\DS-206-GROUP-PROJECT-2\BI-Project\ORDERS_DIMENSIONAL_DB.mdf', 
     SIZE = 10MB, 
     MAXSIZE = UNLIMITED, 
     FILEGROWTH = 10%
@@ -10,7 +10,7 @@ ON PRIMARY
 LOG ON 
 ( 
     NAME = 'ORDERS_DIMENSIONAL_DB_log', 
-    FILENAME = '/Users/milenabazoyan/Desktop/ORDERS_DIMENSIONAL_DB.ldf', 
+    FILENAME = 'C:\Users\arara\OneDrive\Desktop\DS-206-GROUP-PROJECT-2\BI-Project\ORDERS_DIMENSIONAL_DB.ldf', 
     SIZE = 2MB, 
     MAXSIZE = 15MB, 
     FILEGROWTH = 500KB

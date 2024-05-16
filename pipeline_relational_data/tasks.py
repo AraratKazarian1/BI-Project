@@ -75,16 +75,14 @@ def add_constraint(cursor,  table_name, db, schema):
     cursor.commit()
     logger.info(f"Foreign Key Constraint added to {schema}.{table_name} ")
 
-def insert_into_table(cursor, table_name, db, schema, source_data, sheet_name):
-    # Read the Excel sheet
-    df = pd.read_excel(source_data, sheet_name=sheet_name, header=0)
+def insert_into_table(cursor, table_name, db, schema, excel_data, sheet_name):
 
     insert_into_table_script = load_query('insert_into_{}'.format(table_name)).format(db=db, schema=schema)
 
     # Populate a table in SQL Server
-    for index, row in df.iterrows():
-        values = [row[col] if pd.notna(row[col]) else None for col in df.columns]
+    for index, row in excel_data[sheet_name].iterrows():
+        values = [row[col] if pd.notna(row[col]) else None for col in excel_data[sheet_name].columns]
         cursor.execute(insert_into_table_script, *values)
         cursor.commit()
 
-    logger.info(f"{len(df)} rows have been inserted into the {db}.{schema}.{table_name} table")
+    logger.info(f"{len(excel_data[sheet_name])} rows have been inserted into the {db}.{schema}.{table_name} table")
